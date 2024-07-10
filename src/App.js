@@ -1,15 +1,41 @@
 import './App.css';
-import datainfo from './data/db.json';
-import Mainbanner from './Banner';
-import Text from "./text"
+import styled from 'styled-components';
 
+const Title = styled.h2`
+  background-color: black;
+  color: white;
+  font-size: 50px;
+  display : inline-block;
+  padding: 10px;
+`;
+
+const Abtn = styled.a`
+ border:1px solid black;
+ color:black;
+ display : inline-block;
+ padding :10px;
+ border-radius : 15px;
+ text-decoration:none;
+ &:hover{
+  background-color: black;
+  color:white;
+ }
+`;
 
 function App() {
   return (
-    <div>
-      <Text dbinfo = {datainfo["gnb"][0]}></Text>
-      <Text dbinfo = {datainfo["gnb"][1]}></Text>
-      <Text dbinfo = {datainfo["gnb"][2]}></Text>
+    <div className='App'>
+      <Title>나는 스타일 컴포넌트입니다.</Title>
+      <Title>베스트상품</Title>
+      <Title>추천상품</Title>
+      <h2>
+        나는 타이틀입니다. 
+        <Abtn href='http://www.naver.com'>더보기</Abtn>
+      </h2>
+      <h2>
+        나는 타이틀입니다. 
+        <Abtn>응모하기</Abtn>
+      </h2>
     </div>
   );
 }
